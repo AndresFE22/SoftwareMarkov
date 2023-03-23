@@ -1,0 +1,84 @@
+"""
+  #CODIGO MANUAL
+
+  #statess = df['Start']
+
+  #print(statess)
+
+  # The statespace
+  states = ["Start","Tiempo","Extemporaneo"]
+
+    #     Possible sequences of events
+  transitionName = [["SS","ST","SE"],["TS","TT","TE"],["ES","ET","EE"]]
+
+    # Probabilities matrix (transition matrix)
+  transitionMatrix = [[0.1,0.5,0.4],
+                      [0.4,0.4,0.2],
+                      [0.2,0.7,0.1]]
+
+  if sum(transitionMatrix[0])+sum(transitionMatrix[1])+sum(transitionMatrix[1]) != 3:
+    print("Somewhere, something went wrong. Transition matrix, perhaps?")
+  else: 
+    print("All is gonna be okay, you should move on!! ;)")
+
+    # Print Probabilities matrix (transition matrix)
+  pd.DataFrame(transitionMatrix,columns=states,index=states)
+
+  def nextStateProbability(current_state, next_state):
+    #index current state
+    ics = states.index(current_state)
+      #index next state
+    ins = states.index(next_state)
+    transition_probability = transitionMatrix[ics][ins]
+    print("Probability from state [{}] to  State [{}] is {}".format(current_state, next_state, transition_probability))
+    print("La probabilidad del siguiente estado----> " )
+    
+    return transition_probability
+
+    
+        #print ('Index of %s is %s', current_state, ics)
+        #list.index(x[, start[, end]])
+    
+    #@param ["Sleep", "Icecream", "Run"]
+  init = request.form['init']
+  target = request.form['target']
+
+  
+  
+  selected_value = request.form['init']
+
+  probability = nextStateProbability(init, target)
+
+  percentage = probability * 100
+
+  str.format("{:.2f}%".format(percentage))
+
+
+  resultado = str.format("{:.2f}%".format(percentage))
+
+  
+  
+  
+
+
+    #return render_template('formprediction.html')
+
+  #app.run(debug=True)
+"""
+  select_options = {
+    "Start": "entregar a tiempo las actividades",
+    "Tiempo": "entregar extemporaneamente las actividades",
+    "Extemporaneo": "no entregar las actividades"
+    }
+
+  selected_value = request.form.get('init')
+  display_text = select_options.get(selected_value, selected_value)
+
+  select_options2 = {
+    "Start": "entregar a tiempo las actividades",
+    "Tiempo": "entregar extemporaneamente las actividades",
+    "Extemporaneo": "no entregar las actividades"
+    }
+
+  selected_value2 = request.form.get('target')
+  displaytext = select_options2.get(selected_value2, selected_value2)

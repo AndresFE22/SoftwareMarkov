@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/style7.css">
+        <title>Prediction input form</title>
+    </head>
+<body>
+    <div class="container">
+        <div class="caja">   
+          <div class="text">
+            <h1>Seleccione los estados que desee predecir</h1>
+          </div>
+            <div class="form">
+                <form action = "http://localhost:5000/doprediction" method = "post">
+                    <p>
+                      <div class="custom-select" style="width: 350px; height: 70px; margin: 0% ; ">
+                      
+                        <select name="init" size="5" id="select1" required>
+                          
+                          <option disabled selected data-pos="0">Estado inicial</option>
+
+                          <option data-pos="0" value="Start">Inicio</option>
+                          <option data-pos="1" value="EATa1c1">Entrego a tiempo act 1 corte 1</option>
+                          <option data-pos="2" value="EATa2c1">Entrego a tiempo la act 2 corte 1</option>  
+                          <option data-pos="3" value="EATa3c1">Entrego a tiempo act 3 corte 1</option>
+                          <option data-pos="4" value="EATa4c1">Entrego a tiempo act 4 corte 1</option>
+                          <option data-pos="5" value="EATpc1">Entrego a tiempo parcial corte 1</option>                          
+                          <option data-pos="6" value="EEXa1c1">Entrego extemporáneamente act 1 corte 1</option>                     
+                          <option data-pos="7" value="EEXa2c1">Entrego extemporáneamente act 2 corte 1</option>
+                          <option data-pos="8" value="EEXa3c1">Entrego extemporáneamente act 3 corte 1</option>
+                          <option data-pos="9" value="EEXa4c1">Entrego extemporáneamente act 4 corte 1</option>
+                          <option data-pos="10" value="EEXpc1">Entrego extemporáneamente parcial corte 1</option>
+                          <option data-pos="11" value="NoEa1c1">No entrego act 1 corte 1</option>
+                          <option data-pos="12" value="NoEa2c1">No entrego act 2 corte 1</option>
+                          <option data-pos="13" value="NoEa3c1">No entrego act 3 corte 1</option>
+                          <option data-pos="14" value="NoEa4c1">No entrego act 4 corte 1</option>
+                          <option data-pos="15" value="NoEpc1">No entrego parcial corte 1</option>
+                          <option data-pos="16" value="Rcorte1">Retirados corte 1</option>
+                          <option data-pos="17" value="RaM4,5c1">Rendimiento alto mayor a 4,5 corte1</option>
+                          <option data-pos="18" value="Rm3,5_4,4c1">Rendimiento medio de 3,5 a 4,4 corte 1</option>
+                          <option data-pos="19" value="Rb3,0_3,4c1">Rendimiento bajo de 3,0 a 3,4 corte 1</option>
+                          <option data-pos="20" value="Rp0_2,99c1">Reprobado entre 0 y 2,99 corte 1</option>
+                          <option data-pos="21" value="EATa1c2">Entrego a tiempo act 1 corte 2</option>
+                          <option data-pos="22" value="EATa2c2">No entrego la act 2 corte 2</option>  
+                          <option data-pos="23" value="EATa3c2">Entrego a tiempo act 3 corte 2</option>
+                          <option data-pos="24" value="EATa4c2">Entrego a tiempo act 4 corte 2</option>
+                          <option data-pos="25" value="EATpc2">Entrego a tiempo parcial corte 2</option>                          
+                          <option data-pos="26" value="EEXa1c2">Entrego extemporáneamente act 1 corte 2</option>                     
+                          <option data-pos="27" value="EEXa2c2">Entrego extemporáneamente act 2 corte 2</option>
+                          <option data-pos="28" value="EEXa3c2">Entrego extemporáneamente act 3 corte 2</option>
+                          <option data-pos="29" value="EEXa4c2">Entrego extemporáneamente act 4 corte 2</option>
+                          <option data-pos="30" value="EEXpc2">Entrego extemporáneamente parcial corte 2</option>-->
+                          <option data-pos="31" value="NoEa1c2">No entrego act 1 corte 2</option>
+                          <option data-pos="32" value="NoEa2c2">No entrego act 2 corte 2</option>
+                          <option data-pos="33" value="NoEa3c2">No entrego act 3 corte 2</option>
+                          <option data-pos="34" value="NoEa4c2">No entrego act 4 corte 2</option>
+                          <option data-pos="35" value="NoEpc2">No entrego parcial corte 2</option>
+                          <option data-pos="36" value="Rcorte2">Retirados corte 2</option>
+                          <option data-pos="37" value="RaM4,5c2">Rendimiento alto mayor a 4,5 corte2</option>
+                          <option data-pos="38" value="Rm3,5_4,4c2">Rendimiento medio de 3,5 a 4,4 corte 2</option>
+                          <option data-pos="39" value="Rb3,0_3,4c2">Rendimiento bajo de 3,0 a 3,4 corte 2</option>
+                          <option data-pos="40" value="Rp0_2,99c2">Reprobado entre 0 y 2,99 corte 2</option>
+                          <option data-pos="41" value="EATa1c3">Entrego a tiempo act 1 corte 3</option>
+                          <option data-pos="42" value="EATa2c3">No entrego la act 2 corte 3</option>  
+                          <option data-pos=43" value="EATa3c3">Entrego a tiempo act 3 corte 3</option>
+                          <option data-pos="44" value="EATa4c3">Entrego a tiempo act 4 corte 3</option>
+                          <option data-pos="45" value="EATpc3">Entrego a tiempo parcial corte 3</option>                          
+                          <option data-pos="46" value="EEXa1c3">Entrego extemporáneamente act 1 corte 3</option>                     
+                          <option data-pos="47" value="EEXa2c3">Entrego extemporáneamente act 2 corte 3</option>
+                          <option data-pos="48" value="EEXa3c3">Entrego extemporáneamente act 3 corte 3</option>
+                          <option data-pos="49" value="EEXa4c3">Entrego extemporáneamente act 4 corte 3</option>
+                          <option data-pos="50" value="EEXpc3">Entrego extemporáneamente parcial corte 3</option>-->
+                          <option data-pos="51" value="NoEa1c3">No entrego act 1 corte 3</option>
+                          <option data-pos="52" value="NoEa2c3">No entrego act 2 corte 3</option>
+                          <option data-pos="53" value="NoEa3c3">No entrego act 3 corte 3</option>
+                          <option data-pos="54" value="NoEa4c3">No entrego act 4 corte 3</option>
+                          <option data-pos="55" value="NoEpc3">No entrego parcial corte 3</option>
+                          <option data-pos="56" value="Rcorte3">Retirados corte 3</option>
+                          <option data-pos="57" value="Rpcorte3">Reprobados corte 3</option>
+                          <option data-pos="58" value="RaM4,5c3">Rendimiento alto mayor a 4,5 corte3</option>
+                          <option data-pos="59" value="Rm3,5_4,4c3">Rendimiento medio de 3,5 a 4,4 corte 3</option>
+                          <option data-pos="60" value="Rb3,0_3,4c3">Rendimiento bajo de 3,0 a 3,4 corte 3</option>
+                          <option data-pos="61" value="Rp0_2,99c3">Reprobado entre 0 y 2,99 corte 3</option>
+                                              
+                                                                                    
+                          
+                        </select>
+                      </div>
+                        
+                    </p>
+                    <br>
+                    <p>
+                      <div class="custom-select" style="width: 350px; height: 70px;">
+                        <select name="target" id="select2" required>
+                          <option data-pos="63" disabled selected>Estado objetivo</option>
+                          <option data-pos="63" value="Start">Inicio</option>
+                          <option data-pos="64" value="EATa1c1">Entrego a tiempo act 1 corte 1</option>
+                          <option data-pos="65" value="EATa2c1">No entrego la act 2 corte 1</option>  
+                          <option data-pos="66" value="EATa3c1">Entrego a tiempo act 3 corte 1</option>
+                          <option data-pos="67" value="EATa4c1">Entrego a tiempo act 4 corte 1</option>
+                          <option data-pos="68" value="EATpc1">Entrego a tiempo parcial corte 1</option>                          
+                          <option data-pos="69" value="EEXa1c1">Entrego extemporáneamente act 1 corte 1</option>                     
+                          <option data-pos="70" value="EEXa2c1">Entrego extemporáneamente act 2 corte 1</option>
+                          <option data-pos="71" value="EEXa3c1">Entrego extemporáneamente act 3 corte 1</option>
+                          <option data-pos="72" value="EEXa4c1">Entrego extemporáneamente act 4 corte 1</option>
+                          <option data-pos="73" value="EEXpc1">Entrego extemporáneamente parcial corte 1</option>
+                          <option data-pos="74" value="NoEa1c1">No entrego act 1 corte 1</option>
+                          <option data-pos="75" value="NoEa2c1">No entrego act 2 corte 1</option>
+                          <option data-pos="76" value="NoEa3c1">No entrego act 3 corte 1</option>
+                          <option data-pos="77" value="NoEa4c1">No entrego act 4 corte 1</option>
+                          <option data-pos="78" value="NoEpc1">No entrego parcial corte 1</option>
+                          <option data-pos="79" value="Rcorte1">Retirados corte 1</option>
+                          <option data-pos="80" value="RaM4,5c1">Rendimiento alto mayor a 4,5 corte1</option>
+                          <option data-pos="81" value="Rm3,5_4,4c1">Rendimiento medio de 3,5 a 4,4 corte 1</option>
+                          <option data-pos="82" value="Rb3,0_3,4c1">Rendimiento bajo de 3,0 a 3,4 corte 1</option>
+                          <option data-pos="83" value="Rp0_2,99c1">Reprobado entre 0 y 2,99 corte 1</option>
+                          <option data-pos="84" value="EATa1c2">Entrego a tiempo act 1 corte 2</option>
+                          <option data-pos="85" value="EATa2c2">No entrego la act 2 corte 2</option>  
+                          <option data-pos="86" value="EATa3c2">Entrego a tiempo act 3 corte 2</option>
+                          <option data-pos="87" value="EATa4c2">Entrego a tiempo act 4 corte 2</option>
+                          <option data-pos="88" value="EATpc2">Entrego a tiempo parcial corte 2</option>                          
+                          <option data-pos="89" value="EEXa1c2">Entrego extemporáneamente act 1 corte 2</option>                     
+                          <option data-pos="90" value="EEXa2c2">Entrego extemporáneamente act 2 corte 2</option>
+                          <option data-pos="91" value="EEXa3c2">Entrego extemporáneamente act 3 corte 2</option>
+                          <option data-pos="92" value="EEXa4c2">Entrego extemporáneamente act 4 corte 2</option>
+                          <option data-pos="93" value="EEXpc2">Entrego extemporáneamente parcial corte 2</option>-->
+                          <option data-pos="94" value="NoEa1c2">No entrego act 1 corte 2</option>
+                          <option data-pos="95" value="NoEa2c2">No entrego act 2 corte 2</option>
+                          <option data-pos="96" value="NoEa3c2">No entrego act 3 corte 2</option>
+                          <option data-pos="97" value="NoEa4c2">No entrego act 4 corte 2</option>
+                          <option data-pos="98" value="NoEpc2">No entrego parcial corte 2</option>
+                          <option data-pos="99" value="Rcorte2">Retirados corte 2</option>
+                          <option data-pos="100" value="RaM4,5c2">Rendimiento alto mayor a 4,5 corte2</option>
+                          <option data-pos="101" value="Rm3,5_4,4c2">Rendimiento medio de 3,5 a 4,4 corte 2</option>
+                          <option data-pos="102" value="Rb3,0_3,4c2">Rendimiento bajo de 3,0 a 3,4 corte 2</option>
+                          <option data-pos="103" value="Rp0_2,99c2">Reprobado entre 0 y 2,99 corte 2</option>
+                          <option data-pos="104" value="EATa1c3">Entrego a tiempo act 1 corte 3</option>
+                          <option data-pos="105" value="EATa2c3">No entrego la act 2 corte 3</option>  
+                          <option data-pos="106" value="EATa3c3">Entrego a tiempo act 3 corte 3</option>
+                          <option data-pos="107" value="EATa4c3">Entrego a tiempo act 4 corte 3</option>
+                          <option data-pos="108" value="EATpc3">Entrego a tiempo parcial corte 3</option>                          
+                          <option data-pos="109" value="EEXa1c3">Entrego extemporáneamente act 1 corte 3</option>                     
+                          <option data-pos="110" value="EEXa2c3">Entrego extemporáneamente act 2 corte 3</option>
+                          <option data-pos="111" value="EEXa3c3">Entrego extemporáneamente act 3 corte 3</option>
+                          <option data-pos="112" value="EEXa4c3">Entrego extemporáneamente act 4 corte 3</option>
+                          <option data-pos="113" value="EEXpc3">Entrego extemporáneamente parcial corte 3</option>-->
+                          <option data-pos="114" value="NoEa2c3">No entrego act 2 corte 3</option>
+                          <option data-pos="115" value="NoEa3c3">No entrego act 3 corte 3</option>
+                          <option data-pos="116" value="NoEa4c3">No entrego act 4 corte 3</option>
+                          <option data-pos="117" value="NoEpc3">No entrego parcial corte 3</option>
+                          <option data-pos="118" value="Rcorte3">Retirados corte 3</option>
+                          <option data-pos="119" value="Rpcorte3">Reprobados corte 3</option>
+                          <option data-pos="120" value="RaM4,5c3">Rendimiento alto mayor a 4,5 corte3</option>
+                          <option data-pos="121" value="Rm3,5_4,4c3">Rendimiento medio de 3,5 a 4,4 corte 3</option>
+                          <option data-pos="122" value="Rb3,0_3,4c3">Rendimiento bajo de 3,0 a 3,4 corte 3</option>
+                          <option data-pos="123" value="Rp0_2,99c3">Reprobado entre 0 y 2,99 corte 3</option>
+                        </select>
+                      </div>
+                    </p>   
+
+                    
+                                              
+                    <div class="boton">
+                      <p><input type = "submit" value = "PREDECIR" class="submit" /></p>
+        
+                    </div>
+                  </form>
+
+
+
+            </div>
+          
+            
+        </div>
+
+    </div>
+
+   
+  <div class="back" onclick="window.location.href='http://127.0.0.1:5000/'">
+    <div class="bot"><a href="http://127.0.0.1:5000/">
+      INICIO</a></div>
+    </div>
+   
+
+  <script> const select1 = document.getElementById('select1');
+    const select2 = document.getElementById('select2');
+    
+    select1.addEventListener('change', () => {
+    
+        console.log("Evento 'change' detectado en el primer menú desplegable");
+        const selectedOption = select1.options[select1.selectedIndex];
+        const selectedOptionPos = selectedOption.getAttribute('data-pos');
+    
+        for (let i = 0; i < select2.options.length; i++) {
+            const option = select2.options[i];
+            const optionPos = option.getAttribute('data-pos');
+    
+        if (optionPos < selectedOptionPos) {
+            alert('No se puede realizar esta operación');
+            break;
+        }
+        }
+    });
+    
+    /*function updateselect2() {
+    
+      console.log('updateselect2 function called');
+      var select1 = document.getElementById("select1");
+      var select2 = document.getElementById("select2");
+    
+      // Obtener la opción seleccionada en el primer select
+      var selectedOption = select1.options[select1.selectedIndex];
+    
+      // Eliminar todas las opciones actuales del segundo select
+      while (select2.options.length > 0) {
+        select2.remove(0);
+      }
+    
+      // Crear nuevas opciones para el segundo select basadas en la opción seleccionada en el primer select
+      for (var i = selectedOption.index; i < select1.options.length; i++) {
+        var option = document.createElement("option");
+        option.text = select1.options[i].text;
+        option.value = select1.options[i].value;
+        select2.add(option);
+      }
+    }*/
+      /*const select = get(".select");
+    
+      select.scrolltop += 500;*/
+    
+    
+    
+    
+    var x, i, j, l, ll, selElmnt, a, b, c;
+        /* Look for any elements with the class "custom-select": */
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    for (i = 0; i < l; i++) {
+    
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        ll = selElmnt.length;
+          /* For each element, create a new DIV that will act as the selected item: */
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+          /* For each element, create a new DIV that will contain the option list: */
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < ll; j++) {
+            /* For each option in the original select element,
+            create a new DIV that will act as an option item: */
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function(e) {
+                /* When an item is clicked, update the original select box,
+                and the selected item: */
+                var y, i, k, s, h, sl, yl;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                sl = s.length;
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < sl; i++) {
+                if (s.options[i].innerHTML == this.innerHTML) {
+                    s.selectedIndex = i;
+                    h.innerHTML = this.innerHTML;
+                    y = this.parentNode.getElementsByClassName("same-as-selected");
+                    yl = y.length;
+                    for (k = 0; k < yl; k++) {
+                    y[k].removeAttribute("class");
+                    }
+                    this.setAttribute("class", "same-as-selected");
+                    break;
+                }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+          }
+          x[i].appendChild(b);
+          a.addEventListener("click", function(e) {
+            /* When the select box is clicked, close any other select boxes,
+            and open/close the current select box: */
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+          });
+        }
+        
+        function closeAllSelect(elmnt) {
+          /* A function that will close all select boxes in the document,
+          except the current select box: */
+          var x, y, i, xl, yl, arrNo = [];
+          x = document.getElementsByClassName("select-items");
+          y = document.getElementsByClassName("select-selected");
+          xl = x.length;
+          yl = y.length;
+          for (i = 0; i < yl; i++) {
+            if (elmnt == y[i]) {
+              arrNo.push(i)
+            } else {
+              y[i].classList.remove("select-arrow-active");
+            }
+          }
+          for (i = 0; i < xl; i++) {
+            if (arrNo.indexOf(i)) {
+              x[i].classList.add("select-hide");
+            }
+          }
+        }
+        
+        /* If the user clicks anywhere outside the select box,
+        then close all select boxes: */
+        document.addEventListener("click", closeAllSelect);</script>
+</body>
+
+</html>
